@@ -1,0 +1,15 @@
+function buildAddOn(e) {
+  return CardService.newCardBuilder()
+    .setHeader(
+      CardService.newCardHeader()
+        .setTitle("AI Scam Detector")
+    )
+    .addSection(
+      CardService.newCardSection()
+        .addWidget(
+          CardService.newTextParagraph()
+            .setText("Select an email to analyze for scams.")
+        )
+    )
+    .build();
+}
