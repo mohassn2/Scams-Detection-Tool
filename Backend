@@ -1,0 +1,15 @@
+function analyzeWithVertex(emailText) {
+  var url = 'https://email-scam-analyzer-uc.a.run.app/analyze';
+
+  var options = {
+    method: 'post',
+    contentType: 'application/json',
+    payload: JSON.stringify({
+      emailText: emailText
+    }),
+    muteHttpExceptions: true
+  };
+
+  var response = UrlFetchApp.fetch(url, options);
+  return JSON.parse(response.getContentText());
+}
